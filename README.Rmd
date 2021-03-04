@@ -1,0 +1,59 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# rpkgcameron
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of rpkgcameron is to make working with factors easier (and to get completion marks for my assignment!)
+
+## Installation
+
+You can install the released version of rpkgcameron from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("rpkgcameron")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("camharris22/rpkgcameron")
+```
+## Demonstration
+
+This is a basic example which shows you how to concatenate two factors:
+
+```{r example}
+library(rpkgcameron)
+a <- factor(c("character", "hits", "your", "eyeballs"))
+b <- factor(c("but", "integer", "where it", "counts"))
+```
+
+As we can see, concatenate doesn't work properly here:
+
+```{r cars}
+c(a, b)
+```
+
+The function `fbind()` to the rescue!
+
+```{r pressure, echo = FALSE}
+fbind(a, b)
+```
+
+
